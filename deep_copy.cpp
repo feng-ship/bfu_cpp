@@ -27,7 +27,8 @@ public:
 };
 int main(){
     Student s1("张三");//调用普通构造
-    Student s2=s1;//调用深拷贝
+    Student s2(s1);//调用深拷贝
+    //Student s2=s1;也可以
     s1.show();
     s2.show();
     return 0;
