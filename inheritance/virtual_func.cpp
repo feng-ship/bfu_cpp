@@ -16,5 +16,6 @@ public:
 int main(){
     Base *p = new Derived();
     p->show();
+    delete p;
     return 0;
 }
