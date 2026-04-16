@@ -19,6 +19,28 @@ private:
    int day, month, year;
    static Date default_date; //初始化为 1901年1月1日
 };
+int days[13]={0,31,28,31,30,31,30,31,31,30,31,30,31};
+int isLeap(int y){
+    if((y%4==0&&y%100!=0)||y%400==0){
+        return 1;
+    }
+    return 0;
+};
+int total_days(int d,int m,int y){
+    int sum=d;
+    for(int i=1;i<=m;i++){
+        sum+=days[i];
+        if(i==2) sum++;
+    }
+    for(int i=1;i<=y;i++){
+        sum+=365;
+        if(isLeap(i)) sum++;
+    }
+    return sum;
+};
+int AddToYear(int total){
+    
+};
 Date::Date(int d,int m,int y){
     day=d;
     month=m;
