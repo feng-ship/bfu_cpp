@@ -9,7 +9,7 @@ public:
     Stack();
     bool isfull();
     bool isempty();
-    void push(T data);
+    void push(const T &data);
     void pop();
 };
 template<class T,int N>
@@ -25,7 +25,7 @@ bool Stack<T,N>::isempty(){
     return (top<0);
 }
 template<class T,int N>
-void Stack<T,N>::push(T data){
+void Stack<T,N>::push(const T &data){
     if(!isfull()){
         top=top+1;
         s[top]=data;
@@ -44,7 +44,7 @@ void Stack<T,N>::pop(){
 }
 int main(){
     Stack<string,5>s1;
-    s1.push("hell0");
+    s1.push("hello");
     s1.push("world");
     s1.push("!");
     s1.pop();
