@@ -37,6 +37,12 @@ Rectangle<T>::Rectangle(T a,T b,T c,T x1,T y1):Point<T>(x1,y1){
 template<class T>
 void Rectangle<T>::show(){
     cout<<"左上角坐标为"<<":";
-    Point<T>.show();
-    cout<<""
+    Point<T>::show();
+    cout<<"长度为:"<<length<<" "<<"宽度为:"<<width<<" "<<"高度为:"<<height<<endl;
+}
+int main() {
+    // 创建一个长宽高为 10.5, 5.2, 2.0，左上角坐标为 (0.0, 0.0) 的矩形/长方体
+    Rectangle<double> rect(10.5, 5.2, 2.0, 0.0, 0.0);
+    rect.show();
+    return 0;
 }
