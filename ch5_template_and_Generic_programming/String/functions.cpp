@@ -5,6 +5,7 @@ int main(){
     //容量与大小//
     string str1="Hello";
     cout<<str1.size();
+    cout<<str1.length();//两者等价
     cout<<str1.empty();
     str1.clear();
     cout<<str1.size();
@@ -20,10 +21,19 @@ int main(){
     //内容修改//
     string str3="Hello";
     str3+="World";//追加字符串
+    str3.append("World");
+    cout<<str3<<endl;
     str3.push_back('!');//追加单个字符
-    str3.insert(5," C++");
+
+    str3.insert(5," C++");//插入
+
     str3.erase(5,4);//"Hello World!" (删除 " C++")
+
     str3.replace(6,5,"C++");//"Hello C++!" (将 "World" 替换为 "C++")
+
+    str3.assign("abc");//整个替换
+    cout<<str3<<endl;
+
     
     //查找与子串//
     string text = "I love C++ and C++ loves me.";
@@ -40,4 +50,20 @@ int main(){
     // 3. 提取子串
     string sub = text.substr(7, 3); 
     // sub 为 "C++"
+    //典例：提取文件后缀名
+    string file="photo.jpg";
+    size_t pos=file.find(".");
+    string ext=file.substr(pos+1);
+    cout<<ext<<endl;
+    //比较字符串
+    string a="apple";
+    string b="banana";
+    cout<<a.compare(b)<<endl;
+
+    //交换
+    string A="hello";
+    string B="world";
+    A.swap(B);
+    cout<<A<<endl;
+    cout<<B<<endl;
 }
