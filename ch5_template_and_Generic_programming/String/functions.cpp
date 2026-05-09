@@ -25,7 +25,8 @@ int main(){
     cout<<str3<<endl;
     str3.push_back('!');//追加单个字符
 
-    str3.insert(5," C++");//插入
+    string ins=" C++";
+    str3.insert(5,ins,0,ins.size());//插入//或者：str3.insert(5," C++");
 
     str3.erase(5,4);//"Hello World!" (删除 " C++")
 
